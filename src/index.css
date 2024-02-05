@@ -66,6 +66,12 @@ footer a:hover {
   color: black;
 }
 
+.footer_theme-btn {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
 /* post navigation */
 
 .post_navi {
@@ -146,36 +152,68 @@ footer a:hover {
   color: gray;
 }
 
+.post_delete {
+  cursor: pointer;
+}
+
 .post_delete:hover,
 .post_delete:focus {
   color: black;
 }
 
 .post_edit:hover,
-.post_edit:focus {
+.post_edit:focus,
+.post_edit a:hover,
+.post_edit a:focus {
   color: black;
+}
+
+.post_edit a {
+  text-decoration: none;
+  color: gray;
+}
+
+.post_no-post {
+  padding: 24px;
+  text-align: center;
+  color: gray;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
 }
 
 /* post detial */
 
-.post_detial .post_title {
+.post_detail .post_title {
   font-size: 36px;
   line-height: 40px;
 }
 
-.post_detial .post_utils-box {
+.post_detail .post_utils-box {
   padding: 10px 0px;
   border-top: 1px solid #f2f2f2;
   border-bottom: 1px solid #f2f2f2;
   flex-direction: row;
 }
 
-.post_detial .post_profile-box {
+.post_detail .post_profile-box {
   padding: 10px 0px;
 }
 
-.post_detial .post-text {
+.post_detail .post-text {
   padding: 20px 0px;
+}
+
+.post_text-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.post_category {
+  color: gray;
+  border: 1px solid lightgray;
+  background: #f2f2f2;
+  padding: 0px 4px;
+  border-radius: 10px;
+  font-size: 12px;
 }
 
 /* profile */
@@ -218,9 +256,265 @@ footer a:hover {
 .profile_logout {
   color: gray;
   font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .profile_logout:hover,
 .profile_logout:focus {
   color: black;
+}
+
+/* form */
+
+.form {
+  margin: 0 auto;
+  max-width: 680px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.form input {
+  height: 20px;
+  padding: 10px 10px;
+  font-size: 16px;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96%;
+  max-width: 680px;
+}
+
+.form textarea {
+  min-height: 400px;
+  padding: 10px 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  width: 96%;
+  max-width: 680px;
+}
+
+.form .form_block {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.form .form_btn-submit {
+  width: 100%;
+  height: 48px;
+  padding: 10px 10px;
+  float: right;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 16px;
+  background-color: #2563eb;
+  color: white;
+}
+
+.form .form_btn-submit:hover,
+.form .form_btn-submit:focus {
+  background-color: #1945a4;
+}
+
+/* login form */
+
+.form-lg {
+  min-height: 70vh;
+  margin-top: 10vh;
+}
+
+.form_title {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.form_link {
+  margin-left: 10px;
+  text-decoration: none;
+  color: gray;
+}
+
+.form_link:hover,
+.form_link:focus {
+  color: black;
+}
+
+.form_error {
+  color: red;
+}
+
+.form select {
+  border: 1px solid lightgray;
+  max-width: 680px;
+  height: 40px;
+  padding: 0px 20px;
+  font-size: 16px;
+  border-radius: 0.3rem;
+}
+
+/* loader */
+
+.loader {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid #2563eb;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: rotation 1s linear infinite;
+}
+
+/* comments */
+
+.comments {
+  width: 100%;
+}
+
+.comments_form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.comments_form textarea {
+  min-height: 100px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  border: 1px solid lightgray;
+  display: block;
+  width: 100%;
+  max-width: 680px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.comments_form .form_block {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.comments_form .form_btn-submit {
+  width: 100px;
+  height: 36px;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.form_block-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.comments_form .form_btn-submit:hover,
+.comments_form .form_btn-submit:focus {
+  background-color: #1945a4;
+}
+
+.comments_list {
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.comment_box {
+  padding: 12px 0px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.comment_profile-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.comment_email {
+  font-weight: 500;
+}
+
+.comment_date {
+  color: gray;
+}
+
+.comment_delete {
+  color: gray;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.comment_delete:hover,
+.comment_delete:focus {
+  color: black;
+}
+
+.comment_text {
+  font-size: 14px;
+  padding-top: 4px;
+}
+
+/* dark mode */
+
+.white {
+  transition: all 0.25s linear;
+  background-color: white;
+}
+
+.dark {
+  transition: all 0.25s linear;
+  background-color: #1e2937;
+  min-height: 100vh;
+}
+
+.dark a,
+.dark .form label,
+.dark .post_delete,
+.dark .profile_logout,
+.dark .form_title,
+.dark .post_navi-active,
+.dark .post_title,
+.dark .post_author-name,
+.dark .footer_theme-btn,
+.dark .profile_name {
+  color: white;
+}
+
+.dark a:hover,
+.dark a:focus,
+.dark .post_text,
+.dark .post_text--pre-wrap,
+.dark .profile_email,
+.dark .post_date,
+.dark .form_block {
+  color: lightgray;
+}
+
+.dark .form_error {
+  color: #ff6a71;
+}
+
+.dark footer,
+.dark header {
+  background-color: #111827;
 }
